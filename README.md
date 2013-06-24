@@ -12,7 +12,7 @@ npm install grunt-markdown --save-dev
 Then add this line to your gruntfile:
 
 ```javascript
-grunt.loadNpmTasks('grunt-markdown');
+grunt.loadNpmTasks('chains-markdown');
 ```
 
 ## Documentation
