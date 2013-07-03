@@ -1,7 +1,7 @@
 {
   "name": "chains-markdown",
   "description": "Compile markdown to html. GFM and code highlighting support!",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/saiwang/chains-markdown",
   "author": {
     "name": "WangSai",

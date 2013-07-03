@@ -21,13 +21,13 @@ module.exports = function(grunt) {
     });
 
     // Iterate over all specified file groups.
-    async.eachLimit(this.files, 25, function (file, next) {
+    async.eachSeries(this.files, function (file, next) {
         convert(file.src, file.dest, next);
     }.bind(this), this.async());
 
     function convert(src, dest, next){
       var content = markdown.markdown(
-        grunt.file.read(src),
+        grunt.file.read(src).replace(/^-{3}[\w\W]+?-{3}/, ''),  //remove yaml-front-matter
         options
       );
 
