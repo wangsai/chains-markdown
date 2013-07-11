@@ -1,3 +1,11 @@
+/*
+ * chains-markdown
+ * https://github.com/saiwang/chains-markdown
+ *
+ * Copyright (c) 2013 WangSai
+ * Licensed under the MIT license.
+ */
+
 'use strict';
 
 module.exports = function(grunt) {
@@ -42,25 +50,26 @@ module.exports = function(grunt) {
             ext: '.html'
           }
         ]
+      },
+      allinone: {
+        options: {
+          gfm: true,
+          highlight: 'manual'
+        },
+        files: [
+          {
+            src: 'test/samples/*.md',
+            dest: 'out3/one.html'
+          }
+        ]
       }
 
     },
 
     jshint: {
-      all: ['Gruntfile.js', 'tasks/*.js'],
+      all: ['Gruntfile.js', 'tasks/**.js'],
       options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        node: true
+        jshintrc: '.jshintrc'
       }
     }
   });

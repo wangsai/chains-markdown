@@ -1,4 +1,10 @@
 /*
+ * chains-markdown
+ * https://github.com/saiwang/chains-markdown
+ *
+ * Copyright (c) 2013 WangSai
+ * Licensed under the MIT license.
+ *
  * grunt-markdown
  * https://github.com/treasonx/grunt-markdown
  *

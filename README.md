@@ -67,6 +67,8 @@ These are the properties that the `markdown` task accepts:
 
 * `files`: This plugin supports use of the [files API](http://gruntjs.com/configuring-tasks#files) introduced in Grunt 0.4.0. Files may be specified using any one of the [Compact Format](http://gruntjs.com/configuring-tasks#compact-format), [Files Objects Format](http://gruntjs.com/configuring-tasks#files-object-format), or [Files Array Format](http://gruntjs.com/configuring-tasks#files-array-format) (as in the above example).
 
+* Note: * If you specify multiple files to one dest file, chains-markdown will concat all files and output to the dest file.
+
 ## Options
 
 Options passed directly to the markdown parser.

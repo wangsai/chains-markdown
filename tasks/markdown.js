@@ -1,4 +1,10 @@
 /*
+ * chains-markdown
+ * https://github.com/saiwang/chains-markdown
+ *
+ * Copyright (c) 2013 WangSai
+ * Licensed under the MIT license.
+ *
  * grunt-markdown
  * https://github.com/treasonx/grunt-markdown
  *
@@ -26,8 +32,13 @@ module.exports = function(grunt) {
     }.bind(this), this.async());
 
     function convert(src, dest, next){
+
+      var mdcontent = src.map(function(file){
+        return grunt.file.read(file).replace(/^-{3}[\w\W]+?-{3}/, ''); //remove yaml-front-matter
+      }).join('\n');
+
       var content = markdown.markdown(
-        grunt.file.read(src).replace(/^-{3}[\w\W]+?-{3}/, ''),  //remove yaml-front-matter
+        mdcontent,  
         options
       );
 
