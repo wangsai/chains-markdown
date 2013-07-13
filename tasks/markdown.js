@@ -15,7 +15,8 @@
 module.exports = function(grunt) {
   'use strict';
 
-  var async = require('async');
+  var async = require('async'),
+    inspect = require('eyes').inspector({ stream: null });
 
   // Internal lib.
   var markdown = require('./lib/markdown').init(grunt);
@@ -25,6 +26,8 @@ module.exports = function(grunt) {
     var options = this.options({
       highlight: 'auto'
     });
+
+    grunt.log.debug(inspect(this.files));
 
     // Iterate over all specified file groups.
     async.eachSeries(this.files, function (file, next) {
