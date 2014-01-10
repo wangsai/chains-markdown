@@ -36,14 +36,27 @@ module.exports = function(grunt) {
 
     function convert(src, dest, next){
 
+      var yfm;
+
       var mdcontent = src.map(function(file){
-        return grunt.file.read(file).replace(/^-{3}[\w\W]+?-{3}/, ''); //remove yaml-front-matter
+        var c = grunt.file.read(file),
+          y = c.match(/^-{3}[\w\W]+?-{3}/);
+
+        if(y) {
+          yfm = y[0];
+        }
+
+        return c.replace(/^-{3}[\w\W]+?-{3}/, ''); //remove yaml-front-matter
       }).join('\n');
 
       var content = markdown.markdown(
         mdcontent,  
         options
       );
+
+      if(yfm) {
+        content = yfm + '\n' + content;
+      }
 
       grunt.file.write(dest, content);
       grunt.log.writeln('File "' + dest + '" created.');

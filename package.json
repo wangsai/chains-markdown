@@ -1,8 +1,8 @@
 {
   "name": "chains-markdown",
   "description": "Compile markdown to html. GFM and code highlighting support!",
-  "version": "0.1.3",
-  "homepage": "https://github.com/saiwang/chains-markdown",
+  "version": "0.1.4",
+  "homepage": "https://github.com/wangsai/chains-markdown",
   "author": {
     "name": "WangSai",
     "email": "bootcss.com@gmail.com"
@@ -23,15 +23,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/saiwang/chains-markdown"
+    "url": "git://github.com/wangsai/chains-markdown"
   },
   "bugs": {
-    "url": "https://github.com/saiwang/chains-markdown/issues"
+    "url": "https://github.com/wangsai/chains-markdown/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/saiwang/chains-markdown/blob/master/LICENSE-MIT"
+      "url": "https://github.com/wangsai/chains-markdown/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
@@ -42,9 +42,9 @@
     "test": "grunt nodeunit"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-watch": "~0.4.4"
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3"
   },
   "keywords": [
     "gruntplugin"
