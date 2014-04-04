@@ -1,7 +1,7 @@
 {
   "name": "chains-markdown",
   "description": "Compile markdown to html. GFM and code highlighting support!",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/wangsai/chains-markdown",
   "author": {
     "name": "WangSai",
@@ -42,17 +42,17 @@
     "test": "grunt nodeunit"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1"
   },
   "keywords": [
     "gruntplugin"
   ],
   "dependencies": {
-    "highlight.js": "~7.3.0",
-    "marked": "~0.2.9",
-    "async": "~0.2.9",
+    "highlight.js": "~8.0.0",
+    "marked": "~0.3.2",
+    "async": "~0.6.2",
     "eyes": "~0.1.8"
   }
 }
